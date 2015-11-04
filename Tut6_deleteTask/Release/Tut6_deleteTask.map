@@ -1,0 +1,473 @@
+Archive member included because of file (symbol)
+
+/usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/crtm32.o (exit)
+/usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_copy_data.o)
+                              ./main.o (__do_copy_data)
+/usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_clear_bss.o)
+                              ./croutine.o (__do_clear_bss)
+/usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(memcpy.o)
+                              ./queue.o (memcpy)
+/usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(memset.o)
+                              ./tasks.o (memset)
+/usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(strncpy.o)
+                              ./tasks.o (strncpy)
+
+Allocating common symbols
+Common symbol       size              file
+
+xTask2Handle        0x2               ./main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000020000 xr
+data             0x0000000000800060 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000400 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/crtm32.o
+LOAD ./croutine.o
+LOAD ./heap_1.o
+LOAD ./list.o
+LOAD ./main.o
+LOAD ./port.o
+LOAD ./queue.o
+LOAD ./tasks.o
+LOAD ./timers.o
+LOAD ./usart.o
+LOAD /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a
+LOAD /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x190e
+ *(.vectors)
+ .vectors       0x0000000000000000       0x54 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/crtm32.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x0000000000000054                . = ALIGN (0x2)
+                0x0000000000000054                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000000000000054        0x0 linker stubs
+ *(.trampolines*)
+                0x0000000000000054                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000000000000054                __ctors_start = .
+ *(.ctors)
+                0x0000000000000054                __ctors_end = .
+                0x0000000000000054                __dtors_start = .
+ *(.dtors)
+                0x0000000000000054                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000000000000054        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/crtm32.o
+                0x0000000000000054                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000000000000054        0xc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/crtm32.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000000000000060       0x16 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_copy_data.o)
+                0x0000000000000060                __do_copy_data
+ .init4         0x0000000000000076       0x10 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000000076                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000000000000086        0x8 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/crtm32.o
+ *(.init9)
+ *(.text)
+ .text          0x000000000000008e        0x4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/crtm32.o
+                0x000000000000008e                __vector_1
+                0x000000000000008e                __vector_12
+                0x000000000000008e                __bad_interrupt
+                0x000000000000008e                __vector_6
+                0x000000000000008e                __vector_3
+                0x000000000000008e                __vector_11
+                0x000000000000008e                __vector_13
+                0x000000000000008e                __vector_17
+                0x000000000000008e                __vector_19
+                0x000000000000008e                __vector_5
+                0x000000000000008e                __vector_4
+                0x000000000000008e                __vector_9
+                0x000000000000008e                __vector_2
+                0x000000000000008e                __vector_15
+                0x000000000000008e                __vector_8
+                0x000000000000008e                __vector_14
+                0x000000000000008e                __vector_10
+                0x000000000000008e                __vector_16
+                0x000000000000008e                __vector_18
+                0x000000000000008e                __vector_20
+ .text          0x0000000000000092      0x3b0 ./croutine.o
+                0x0000000000000092                xCoRoutineCreate
+                0x0000000000000198                vCoRoutineAddToDelayedList
+                0x0000000000000212                vCoRoutineSchedule
+                0x00000000000003f8                xCoRoutineRemoveFromEventList
+ .text          0x0000000000000442       0x72 ./heap_1.o
+                0x0000000000000442                pvPortMalloc
+                0x0000000000000494                vPortFree
+                0x0000000000000496                vPortInitialiseBlocks
+                0x00000000000004a0                xPortGetFreeHeapSize
+ .text          0x00000000000004b4      0x124 ./list.o
+                0x00000000000004b4                vListInitialise
+                0x00000000000004d0                vListInitialiseItem
+                0x00000000000004d8                vListInsertEnd
+                0x0000000000000522                vListInsert
+                0x0000000000000590                vListRemove
+ .text          0x00000000000005d8       0x9a ./main.o
+                0x00000000000005d8                uart_print_Task2
+                0x00000000000005f6                uart_print_Task1
+                0x000000000000063c                main
+ .text          0x0000000000000672      0x26e ./port.o
+                0x0000000000000672                pxPortInitialiseStack
+                0x0000000000000706                xPortStartScheduler
+                0x0000000000000770                vPortEndScheduler
+                0x0000000000000772                vPortYield
+                0x0000000000000824                vPortYieldFromTick
+                0x00000000000008da                __vector_7
+ .text          0x00000000000008e0      0x61a ./queue.o
+                0x0000000000000960                xQueueCreate
+                0x0000000000000a20                xQueueGenericSend
+                0x0000000000000bdc                xQueueGenericSendFromISR
+                0x0000000000000c9a                xQueueGenericReceive
+                0x0000000000000e30                xQueueReceiveFromISR
+                0x0000000000000eb0                uxQueueMessagesWaiting
+                0x0000000000000ec0                uxQueueMessagesWaitingFromISR
+                0x0000000000000ec6                vQueueDelete
+                0x0000000000000ee0                xQueueIsQueueEmptyFromISR
+                0x0000000000000eec                xQueueIsQueueFullFromISR
+ .text          0x0000000000000efa      0x988 ./tasks.o
+                0x0000000000000f68                xTaskGenericCreate
+                0x0000000000001176                vTaskDelete
+                0x000000000000120e                uxTaskPriorityGet
+                0x000000000000122c                vTaskPrioritySet
+                0x000000000000130c                vTaskStartScheduler
+                0x0000000000001362                vTaskEndScheduler
+                0x000000000000136e                vTaskSuspendAll
+                0x000000000000137a                xTaskGetTickCount
+                0x0000000000001390                xTaskGetTickCountFromISR
+                0x000000000000139c                uxTaskGetNumberOfTasks
+                0x00000000000013a2                vTaskIncrementTick
+                0x00000000000014e6                xTaskResumeAll
+                0x0000000000001644                vTaskDelay
+                0x000000000000168c                vTaskSwitchContext
+                0x0000000000001730                vTaskPlaceOnEventList
+                0x000000000000176a                xTaskRemoveFromEventList
+                0x00000000000017ee                vTaskSetTimeOutState
+                0x0000000000001804                xTaskCheckForTimeOut
+                0x000000000000187a                vTaskMissedYield
+ .text          0x0000000000001882        0x0 ./timers.o
+ .text          0x0000000000001882       0x4a ./usart.o
+                0x0000000000001882                USART_Init
+                0x0000000000001896                USART_Transmit
+                0x000000000000189e                USART_Receive
+                0x00000000000018a6                USART_putstring
+ .text          0x00000000000018cc        0x0 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_exit.o)
+ .text          0x00000000000018cc        0x0 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_copy_data.o)
+ .text          0x00000000000018cc        0x0 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_clear_bss.o)
+ .text          0x00000000000018cc        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(memcpy.o)
+ .text          0x00000000000018cc        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(memset.o)
+ .text          0x00000000000018cc        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(strncpy.o)
+                0x00000000000018cc                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x00000000000018cc        0x0 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x00000000000018cc        0x0 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000000018cc        0x0 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x00000000000018cc       0x12 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(memcpy.o)
+                0x00000000000018cc                memcpy
+ .text.avr-libc
+                0x00000000000018de        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(memset.o)
+                0x00000000000018de                memset
+ .text.avr-libc
+                0x00000000000018ec       0x1e /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(strncpy.o)
+                0x00000000000018ec                strncpy
+                0x000000000000190a                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000000000000190a        0x0 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_exit.o)
+                0x000000000000190a                exit
+                0x000000000000190a                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000000000000190a        0x4 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x000000000000190e                _etext = .
+
+.data           0x0000000000800060       0x5a load address 0x000000000000190e
+                0x0000000000800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/crtm32.o
+ .data          0x0000000000800060        0x0 ./croutine.o
+ .data          0x0000000000800060        0x0 ./heap_1.o
+ .data          0x0000000000800060        0x0 ./list.o
+ .data          0x0000000000800060       0x53 ./main.o
+ .data          0x00000000008000b3        0x0 ./port.o
+ .data          0x00000000008000b3        0x0 ./queue.o
+ .data          0x00000000008000b3        0x7 ./tasks.o
+ .data          0x00000000008000ba        0x0 ./timers.o
+ .data          0x00000000008000ba        0x0 ./usart.o
+ .data          0x00000000008000ba        0x0 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_exit.o)
+ .data          0x00000000008000ba        0x0 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_copy_data.o)
+ .data          0x00000000008000ba        0x0 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_clear_bss.o)
+ .data          0x00000000008000ba        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(memcpy.o)
+ .data          0x00000000008000ba        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(memset.o)
+ .data          0x00000000008000ba        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(strncpy.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00000000008000ba                . = ALIGN (0x2)
+                0x00000000008000ba                _edata = .
+                0x00000000008000ba                PROVIDE (__data_end, .)
+
+.bss            0x00000000008000ba      0x2e7
+                0x00000000008000ba                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00000000008000ba        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/crtm32.o
+ .bss           0x00000000008000ba       0x3a ./croutine.o
+                0x00000000008000ba                pxCurrentCoRoutine
+ .bss           0x00000000008000f4      0x25a ./heap_1.o
+ .bss           0x000000000080034e        0x0 ./list.o
+ .bss           0x000000000080034e        0x0 ./main.o
+ .bss           0x000000000080034e        0x0 ./port.o
+ .bss           0x000000000080034e        0x0 ./queue.o
+ .bss           0x000000000080034e       0x51 ./tasks.o
+                0x000000000080034e                pxCurrentTCB
+ .bss           0x000000000080039f        0x0 ./timers.o
+ .bss           0x000000000080039f        0x0 ./usart.o
+ .bss           0x000000000080039f        0x0 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_exit.o)
+ .bss           0x000000000080039f        0x0 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_copy_data.o)
+ .bss           0x000000000080039f        0x0 /usr/lib/gcc/avr/4.5.3/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x000000000080039f        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(memcpy.o)
+ .bss           0x000000000080039f        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(memset.o)
+ .bss           0x000000000080039f        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(strncpy.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x000000000080039f        0x2 ./main.o
+                0x000000000080039f                xTask2Handle
+                0x00000000008003a1                PROVIDE (__bss_end, .)
+                0x000000000000190e                __data_load_start = LOADADDR (.data)
+                0x0000000000001968                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00000000008003a1        0x0
+                0x00000000008003a1                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00000000008003a1                PROVIDE (__noinit_end, .)
+                0x00000000008003a1                _end = .
+                0x00000000008003a1                PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x0000000000000000      0x888
+ *(.stab)
+ .stab          0x0000000000000000      0x6cc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/crtm32.o
+ .stab          0x00000000000006cc       0x84 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(memcpy.o)
+                                         0x90 (size before relaxing)
+ .stab          0x0000000000000750       0x6c /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(memset.o)
+                                         0x78 (size before relaxing)
+ .stab          0x00000000000007bc       0xcc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/libc.a(strncpy.o)
+                                         0xd8 (size before relaxing)
+
+.stabstr        0x0000000000000000       0xdf
+ *(.stabstr)
+ .stabstr       0x0000000000000000       0xdf /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr5/crtm32.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(Tut6_deleteTask.elf elf32-avr)
+LOAD linker stubs
